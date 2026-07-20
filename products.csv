@@ -1,0 +1,7 @@
+product_id,product_name,category,unit_cost,current_price
+P001,Scenario1 - Jasmine Rice 5kg (above market),Dry Goods,70,113
+P002,Scenario2 - Chicken Breast 1kg (trend up),Meat,70,105
+P003,Scenario3 - Iceberg Lettuce (trend down),Produce,70,102
+P004,"Scenario4 - Soy Sauce 1L (stable, no change)",Condiments,70,101
+P005,Scenario5 - Wagyu Beef Striploin (floor conflict),Meat,100,90
+P006,Scenario6 - Cooking Oil 5L (stability clamp),Dry Goods,70,126
