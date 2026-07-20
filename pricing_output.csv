@@ -1,0 +1,7 @@
+product_id,product_name,forecast_unit,trend_pct,weeks_of_data_used,current_price,suggested_price,change_pct,flag_for_review,reason
+P001,Scenario1 - Jasmine Rice 5kg (above market),57.0,14.0,10,113,110,-2.7,False,"current price +13.0% vs competitor (> +10% threshold) -> market_alignment applied, target 110.00 (competitor x 1.10); trend_up suppressed (trend_pct +14.0% would have applied +3%)"
+P002,Scenario2 - Chicken Breast 1kg (trend up),56.0,24.4,10,105,108,2.9,False,"trend_pct +24.4% (> +5% dead zone) -> trend_up applied, +3%"
+P003,Scenario3 - Iceberg Lettuce (trend down),36.0,-25.0,10,102,99,-2.9,False,"trend_pct -25.0% (< -5% dead zone) -> trend_down applied, -3%"
+P004,"Scenario4 - Soy Sauce 1L (stable, no change)",45.0,-2.2,10,101,101,0.0,False,"no rule matched (price within market band, trend_pct -2.2% within +/-5% dead zone) -> price held"
+P005,Scenario5 - Wagyu Beef Striploin (floor conflict),20.0,-4.8,10,90,108,20.0,True,"no rule matched (price within market band, trend_pct -4.8% within +/-5% dead zone) -> price held; floor 108.00 (unit_cost x 1.08) enforced, overriding prior guardrail result of 90.00 (floor 108.00 exceeds ceiling 97.75 -- no single price satisfies both; minimum-margin floor takes precedence)"
+P006,Scenario6 - Cooking Oil 5L (stability clamp),50.0,-2.0,10,126,113,-10.3,True,"current price +26.0% vs competitor (> +10% threshold) -> market_alignment applied, target 110.00 (competitor x 1.10); stability band [113.40, 138.60] (+/-10% of last week's 126.00) -> clamped to 113.40"
